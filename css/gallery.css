@@ -1,0 +1,109 @@
+.central-content {
+    background-color: none;
+    box-shadow: none;
+    border-radius: none;
+}
+
+.central-content .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition:opacity 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.slide.active-slide {
+    position: relative;
+    transition: transform 0.25s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.prev-slide {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.slide.next-slide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slide img {
+    width: 99%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+
+}
+
+.slide p {
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0 0 3px rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+
+.slider-controls button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.slider-controls button:active {
+    transform: scale(0.9);
+}
+
+.slider-info {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0 0 3px rgb(255, 255, 255);
+}

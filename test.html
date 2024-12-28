@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="khrulev">
+    <link rel="icon" href="images/icons8-cyberpunk.svg" type="svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/test.css">
+    <title>Тест</title>
+</head>
+
+<body>
+    <header>
+        <nav class="header-nav">
+            <div class="header-left">
+                <a href="index.html"><img src="images/Artboard3525.png" alt="cyberpunk" class="header-logo"></a>
+            </div>
+            <div class="header-right">
+                <a href="index.html">Описание</a>
+                <a href="glossary.html">Глоссарий</a>
+                <a href="test.html" class="active">Тест</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="profile.html" id="username">Личный кабинет</a>
+                <div class="logout-section" id="logout-section">
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1 class="top-pagename">Тест</h1>
+        <section class="central-content">
+            <h2>Тест по Cyberpunk 2077</h2>
+
+            <form id="quizForm" name="quizForm" novalidate>
+                <fieldset>
+                    <label for="q1">1. Глвный друг ви в начале игры?</label>
+                    <input type="text" id="q1" name="q1">
+                    <span class="error-message"></span>
+                    <span class="success-message"></span>
+                </fieldset>
+
+                <fieldset>
+                    <label for="q2">2. Кто записан на биочипе, котрый мы вставляем сеье в голову?(фамилия)</label>
+                    <input type="text" id="q2" name="q2">
+                    <span class="error-message"></span>
+                    <span class="success-message"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3.Марка машины Джонни?</legend>
+                    <label><input type="radio" name="q3" value="Mazda"> Mazda</label>
+                    <label><input type="radio" name="q3" value="Porsche"> Porsche</label>
+                    <label><input type="radio" name="q3" value="Lamborghini"> Lamborghini</label>
+                    <span class="error-message"></span>
+                    <span class="success-message"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Фиксер в пустошах?</legend>
+                    <label><input type="radio" name="q4" value="Вакако">Вакако</label>
+                    <label><input type="radio" name="q4" value="Дакота">Дакота</label>
+                    <label><input type="radio" name="q4" value="Бестия">Бестия</label>
+                    <span class="error-message"></span>
+                    <span class="success-message"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>5. Групировка помешанначя на киберэмплантах?</legend>
+                    <label><input type="radio" name="q5" value="Тигринные когти">Тигринные когти</label>
+                    <label><input type="radio" name="q5" value="Альдекальдо">Альдекальдо</label>
+                    <label><input type="radio" name="q5" value="Мальстрём">Мальстрём</label>
+                    <span class="error-message"></span>
+                    <span class="success-message"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>6. Какой предыстории нет у главного героя?</legend>
+                    <label><input type="radio" name="q6" value="Наёмник">Наёмник</label>
+                    <label><input type="radio" name="q6" value="Карпорат">Карпорат</label>
+                    <label><input type="radio" name="q6" value="Кочевник">Кочевник</label>
+                    <span class="error-message"></span>
+                    <span class="success-message"></span>
+                </fieldset>
+
+                <div class="result-section">
+                    <span id="test-result"></span>
+                </div>
+
+                <button type="submit" id="submit-button">Ответить</button>
+            </form>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="socials-container">
+            <div class="contact-info">
+                <div class="social-links">
+                    <a href="tel:">+7 (999) 666-55-11</a>
+                    <a href="#"><img src="images/icons8-vk.svg" alt="VK"></a>
+                    <a href="#"><img src="images/icons8-telegram.svg" alt="Telegram"></a>
+                    <a href="#"><img src="images/icons8-github.svg" alt="Github"></a>
+                </div>
+                <p>&copy; 2024 khrulev. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>

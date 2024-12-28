@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по Dota 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slide" name="slide1">
+            <h2>Авторизация на тест</h2>
+            <form name="authForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" name="name" pattern="^[А-ЯЁ][а-яё]+$" maxlength=10 required>
+                    <span class="error" style="color: red; display: none;">Ошибка</span>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Дата рождения:</label>
+                    <input type="date" name="birthdate" min="1920-01-01" max="2022-01-01" required>
+                    <span class="error" style="color: red; display: none;">Ошибка</span>
+                </div>
+                <div class="form-group">
+                    <label>Пол:</label>
+                    <div>
+                        <input type="radio" name="gender" value="Мужчина" checked=true required>
+                        <label>Мужчина</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="Женщина" required>
+                        <label>Женщина</label>
+                    </div>
+                </div>
+                <input type="submit" name="startTest" value="Начать тест">
+            </form>
+        </div>
+
+        <div class="slide" name="slide2" style="display:none;">
+            <h2>Ваш тест по Dota 2</h2>
+            <form name="testForm" novalidate>
+                <div class="form-group">
+                    <label>1. Какой атрибут у Lifestealer?</label>
+                    <div>
+                        <input type="radio" name="question1" value="0" required>
+                        <label>Ловкость</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question1" value="1">
+                        <label>Сила</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question1" value="0">
+                        <label>Интеллект</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question1" value="0">
+                        <label>Универсальность</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>2. Какой атрибут у Axe?</label>
+                    <div>
+                        <input type="radio" name="question2" value="0" required>
+                        <label>Ловкость</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question2" value="1">
+                        <label>Сила</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question2" value="0">
+                        <label>Интеллект</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question2" value="0">
+                        <label>Универсальность</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>3. Какой атрибут у Zeus?</label>
+                    <div>
+                        <input type="radio" name="question3" value="0" required>
+                        <label>Ловкость</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question3" value="0">
+                        <label>Сила</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question3" value="1">
+                        <label>Интеллект</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question3" value="0">
+                        <label>Универсальность</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>4. Какой предмет даёт невидимость?</label>
+                    <input type="text" name="invisibilityItem" value=""
+                        pattern="(?i)^(Shadow blade|Glimmer cape|Trickster Cloak)$" required>
+                    <span class="error" style="color: red; display: none;">Ошибка</span>
+                </div>
+                <div class="form-group">
+                    <label>5. Напишите любой скилл Lifestealer</label>
+                    <input type="text" name="lifestealerSkill" value=""
+                        pattern="(?i)^(rage|open wounds|ghoul frenzy|infest|unfettered)$" required>
+                    <span class="error" style="color: red; display: none;">Ошибка</span>
+                </div>
+                <div class="form-group">
+                    <label>6. Какой атрибут у Phantom Assassin?</label>
+                    <div>
+                        <input type="radio" name="question6" value="1" required>
+                        <label>Ловкость</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question6" value="0">
+                        <label>Сила</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question6" value="0">
+                        <label>Интеллект</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="question6" value="0">
+                        <label>Универсальность</label>
+                    </div>
+                </div>
+                <input type="submit" name="checkAnswers" value="Проверить">
+                <input type="reset" value="Сбросить">
+            </form>
+        </div>
+
+        <div class="slide" name="slide3" style="display:none;">
+            <h2>Результаты теста</h2>
+            <div name="results"></div>
+            <button name="retryButton">Попробовать снова</button>
+        </div>
+    </div>
+</body>
+
+</html>

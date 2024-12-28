@@ -1,146 +1,116 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест по Dota 2</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <meta author="Khrulev">
+    <link rel="icon" href="images/icons8-cyberpunk.svg" type="svg">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Сyberpunk 2077</title>
 </head>
 
 <body>
-    <div class="slider">
-        <div class="slide" name="slide1">
-            <h2>Авторизация на тест</h2>
-            <form name="authForm" novalidate>
-                <div class="form-group">
-                    <label for="name">Имя:</label>
-                    <input type="text" name="name" pattern="^[А-ЯЁ][а-яё]+$" maxlength=10 required>
-                    <span class="error" style="color: red; display: none;">Ошибка</span>
-                </div>
-                <div class="form-group">
-                    <label for="birthdate">Дата рождения:</label>
-                    <input type="date" name="birthdate" min="1920-01-01" max="2022-01-01" required>
-                    <span class="error" style="color: red; display: none;">Ошибка</span>
-                </div>
-                <div class="form-group">
-                    <label>Пол:</label>
-                    <div>
-                        <input type="radio" name="gender" value="Мужчина" checked=true required>
-                        <label>Мужчина</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="gender" value="Женщина" required>
-                        <label>Женщина</label>
-                    </div>
-                </div>
-                <input type="submit" name="startTest" value="Начать тест">
-            </form>
-        </div>
+    <header>
+        <nav class="header-nav">
+            <div class="header-left">
+                <a href="index.html"><img src="images/Artboard3525.png" alt="cyberpunk" class="header-logo"></a>
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="active">Описание</a>
+                <a href="glossary.html">Глоссарий</a>
+                <a href="test.html">Тест</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="profile.html" id="username">Личный кабинет</a>
+                <div class="logout-section" id="logout-section">
 
-        <div class="slide" name="slide2" style="display:none;">
-            <h2>Ваш тест по Dota 2</h2>
-            <form name="testForm" novalidate>
-                <div class="form-group">
-                    <label>1. Какой атрибут у Lifestealer?</label>
-                    <div>
-                        <input type="radio" name="question1" value="0" required>
-                        <label>Ловкость</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question1" value="1">
-                        <label>Сила</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question1" value="0">
-                        <label>Интеллект</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question1" value="0">
-                        <label>Универсальность</label>
-                    </div>
                 </div>
-                <div class="form-group">
-                    <label>2. Какой атрибут у Axe?</label>
-                    <div>
-                        <input type="radio" name="question2" value="0" required>
-                        <label>Ловкость</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question2" value="1">
-                        <label>Сила</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question2" value="0">
-                        <label>Интеллект</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question2" value="0">
-                        <label>Универсальность</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>3. Какой атрибут у Zeus?</label>
-                    <div>
-                        <input type="radio" name="question3" value="0" required>
-                        <label>Ловкость</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question3" value="0">
-                        <label>Сила</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question3" value="1">
-                        <label>Интеллект</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question3" value="0">
-                        <label>Универсальность</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>4. Какой предмет даёт невидимость?</label>
-                    <input type="text" name="invisibilityItem" value=""
-                        pattern="(?i)^(Shadow blade|Glimmer cape|Trickster Cloak)$" required>
-                    <span class="error" style="color: red; display: none;">Ошибка</span>
-                </div>
-                <div class="form-group">
-                    <label>5. Напишите любой скилл Lifestealer</label>
-                    <input type="text" name="lifestealerSkill" value=""
-                        pattern="(?i)^(rage|open wounds|ghoul frenzy|infest|unfettered)$" required>
-                    <span class="error" style="color: red; display: none;">Ошибка</span>
-                </div>
-                <div class="form-group">
-                    <label>6. Какой атрибут у Phantom Assassin?</label>
-                    <div>
-                        <input type="radio" name="question6" value="1" required>
-                        <label>Ловкость</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question6" value="0">
-                        <label>Сила</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question6" value="0">
-                        <label>Интеллект</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="question6" value="0">
-                        <label>Универсальность</label>
-                    </div>
-                </div>
-                <input type="submit" name="checkAnswers" value="Проверить">
-                <input type="reset" value="Сбросить">
-            </form>
-        </div>
+            </div>
+        </nav>
+    </header>
 
-        <div class="slide" name="slide3" style="display:none;">
-            <h2>Результаты теста</h2>
-            <div name="results"></div>
-            <button name="retryButton">Попробовать снова</button>
+
+    <main>
+        <h1 class="top-pagename">Описание</h1>
+
+        <section class="central-content">
+            <div class="content">
+                <h2>Найт-Сити - город мечты</h2>
+                <p>Добро пожаловать в 2077 год — мир, где технологии слились с человеческим существованием, создав
+                    реальность, где всё можно улучшить, модифицировать или сломать. Найт-Сити — мегаполис будущего,
+                    пропитанный неоновым светом и кровью, стоит как памятник человеческой жадности, порокам и
+                    безжалостному капитализму.</p>
+                <p>После ядерной катастрофы и экономического коллапса мир оказался раздробленным. Корпорации поднялись
+                    из пепла старых государств, став единственными правителями. Они контролируют всё — от финансов и
+                    технологий до жизней обычных людей. Мир делится на элиту, живущую в небоскрёбах, и бедняков,
+                    вынужденных выживать на улицах, рискуя жизнью ради клочка надежды.</p>
+                <p>Главный герой, V, — наёмник, стремящийся сделать себе имя в этом жестоком мире. Ему предстоит
+                    столкнуться с последствиями рискованного ограбления, результатом которого становится загрузка в его
+                    сознание цифровой копии Джонни Сильверхенда — легендарного рокера и террориста. Джонни движим жаждой
+                    мести и разрушения корпораций, и его присутствие в голове V постепенно начинает стирать грани между
+                    двумя личностями.</p>
+                <img src="images/Cyberpunk-2077.jpg" alt="night city" width="90%" height="90%">
+                <h2>Локации</h2>
+                <p>Найт-Сити — главный игровой мир Cyberpunk 2077, разделённый на уникальные районы, каждый из которых
+                    обладает своим характером и атмосферой:</p>
+                <p>Сити-Центр — сердце власти и богатства. Небоскрёбы корпораций взмывают ввысь, а улицы наполнены
+                    элитами в дорогих костюмах и бронированными охранниками. Это место, где власть чувствуется в
+                    каждой детали — от блестящих фасадов до бесконечных камер наблюдения.</p>
+                <p>Уотсон — заброшенные фабрики, нелегальные рынки и притоны. Здесь царит хаос, а бандитские
+                    группировки, такие как Мальстрём, правят улицами. Нищета сочетается с высокими технологиями,
+                    создавая контрасты между бедностью и возможностями.</p>
+                <p>Вестбрук — район богатых и знаменитых. Здесь расположены клубы, казино и роскошные особняки.
+                    Однако за фасадом гламура скрываются заговоры и преступные махинации.</p>
+                <p>Пасифика — когда-то задуманный как курорт, он превратился в зону беззакония. Район заполнен
+                    заброшенными зданиями, где правит жестокая банда Животные и таинственные «Вудуисты». Здесь
+                    процветает нелегальная торговля технологиями и наркотиками.</p>
+                <p>Пустоши (Badlands) — пригородные зоны и выжженные земли за пределами Найт-Сити. Здесь живут
+                    кочевники, ведущие свои дела вдали от корпоративного влияния.</p>
+                <img src="images/gallery/cyber3.jpg" alt="night city" width="90%" height="90%">
+                <h2>Персонажи</h2>
+                <p>V — главный герой, наёмник, чей характер, внешний вид и происхождение настраиваются игроком. Его
+                    история зависит от выбранного пути: Корпорат — бывший работник корпорации, знакомый с миром интриг и
+                    предательств, Кочевник — выходец из пустошей, привыкший к суровым условиям выживания,Дитя улиц —
+                    выросший в криминальной среде, мастер выживания на улицах.</p>
+                <p>Джонни Сильверхенд — анархист и фронтмен культовой рок-группы Samurai. Его цифровая копия становится
+                    важной частью сюжета, открывая доступ к секретам прошлого и будущего Найт-Сити.</p>
+                <p>Джеки Уэллс — друг и напарник V, мечтающий стать легендой среди наёмников.</p>
+                <p>Панам Палмер — кочевница с сильным характером, способная стать союзником или романтическим интересом.
+                </p>
+                <p>Джуди Альварес — хакер и эксперт по брейндансам, борющаяся за справедливость.</p>
+                <p>Ривер Уорд — детектив полиции, охотящийся за преступниками.</p>
+                <p>Такемура — бывший телохранитель корпорации Arasaka, связанный с корпоративными интригами.</p>
+                <img src="images/gallery/cyber2.jpg" alt="night city" width="90%" height="90%">
+                <h2>Игровой процесс</h2>
+                <p>Cyberpunk 2077 предлагает нелинейный подход к прохождению и обширную кастомизацию персонажа.</p>
+                <p>Ролевая система — игроки выбирают стиль игры: скрытное проникновение, кибер-взлом или открытый бой.
+                </p>
+                <p>Импланты — модификация тела для улучшения навыков: киберглаз, сканеры, усиленные руки и клинки.</p>
+                <p>Хакерство — возможность взламывать камеры, роботов и врагов, контролируя окружение.</p>
+                <p>Открытый мир — исследуйте улицы, здания и секретные места, взаимодействуйте с NPC и выполняйте
+                    задания.</p>
+                <p>Транспорт — множество машин и мотоциклов с возможностью угона и тюнинга.</p>
+                <img src="images/gallery/cyber1.jpg" alt="night city" width="90%" height="90%">
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="socials-container">
+            <div class="contact-info">
+                <div class="social-links">
+                    <a href="tel:">+7 (999) 666-55-11</a>
+                    <a href="#"><img src="images/icons8-vk.svg" alt="VK"></a>
+                    <a href="#"><img src="images/icons8-telegram.svg" alt="Telegram"></a>
+                    <a href="#"><img src="images/icons8-github.svg" alt="Github"></a>
+                </div>
+                <p>&copy; 2024 Ilm1n. Все права защищены.</p>
+            </div>
         </div>
-    </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

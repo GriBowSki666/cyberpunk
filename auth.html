@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="khrulev">
+    <link rel="icon" href="images/icons8-cyberpunk.svg" type="svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <title>Вход</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="header-nav">
+            <div class="header-left">
+                <img src="images/Artboard3525.png" class="header-logo">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form id="auth-form" name="authForm" novalidate>
+                <label for="login">Логин: (Русские буквы, цифры. 4-10 символов)</label>
+                <span id="login-error" class="error-message"></span>
+                <input type="text" id="login" name="login" pattern="^[А-Яа-я0-9]{4,10}$" placeholder="Введите логин"
+                    required>
+
+                <label for="date">Дата рождения: (01.01.1950 - 07.12.2024)</label>
+                <span id="date-error" class="error-message"></span>
+                <input type="date" id="date" name="date" min="1950-01-01" max="2024-12-07" required>
+
+                <label for="gender">Пол:</label>
+                <span>Мужской<input type="radio" id="male" name="gender" value="Мужской" required checked></span>
+                <span>Женский<input type="radio" id="female" name="gender" value="Женский" required></span>
+                <span id="gender-error" class="error-message"></span>
+
+                <button type="submit" id="login-button">Войти</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials-container">
+            <div class="contact-info">
+                <div class="social-links">
+                    <a href="tel:">+7 (921) 982-62-83</a>
+                    <a href="#"><img src="images/icons8-vk.svg" alt="VK"></a>
+                    <a href="#"><img src="images/icons8-telegram.svg" alt="Telegram"></a>
+                    <a href="#"><img src="images/icons8-github.svg" alt="Github"></a>
+                </div>
+                <p>&copy; 2024 khrulev. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>
